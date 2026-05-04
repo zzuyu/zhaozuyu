@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Karry (zzuyu) | Personal Homepage</title>
+    <meta
+      name="description"
+      content="Karry (zzuyu)'s personal homepage, focused on AI Coding, selected works, and contact."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css?v=20260315-17" />
+  </head>
+  <body style="--galaxy-ribbon-url: url('./assets/backgrounds/galaxy-ribbon.svg?v=20260313-3')">
+    <div class="background-layer" aria-hidden="true"></div>
+    <div class="background-ribbon" aria-hidden="true"></div>
+
+    <div class="site-shell">
+      <header class="site-header">
+        <button
+          class="site-mark"
+          type="button"
+          data-slide-target="0"
+          aria-label="Go to intro"
+          data-i18n-aria-label="siteMarkAria"
+        >
+          K
+        </button>
+
+        <nav class="site-nav" aria-label="Primary">
+          <button type="button" data-slide-target="0" data-i18n="navHome">Home</button>
+          <button type="button" data-slide-target="1" data-i18n="navExperience">Experience</button>
+          <button type="button" data-slide-target="2" data-i18n="navPapers">Papers</button>
+          <button type="button" data-slide-target="3" data-i18n="navProjects">Projects</button>
+          <button type="button" data-slide-target="4" data-i18n="navBlog">Blog</button>
+          <button type="button" data-slide-target="5" data-i18n="navContact">Contact</button>
+        </nav>
+
+        <button class="site-pill" id="langToggle" type="button" aria-label="Switch to Chinese">
+          中文
+        </button>
+      </header>
+
+      <main class="slider-shell">
+        <button
+          class="slide-arrow slide-arrow-left"
+          id="prevSlide"
+          type="button"
+          aria-label="Previous slide"
+          data-i18n-aria-label="prevSlideAria"
+        >
+          <svg viewBox="0 0 24 24" focusable="false">
+            <path
+              d="M14.78 5.47a.75.75 0 0 1 0 1.06L9.31 12l5.47 5.47a.75.75 0 1 1-1.06 1.06l-6-6a.75.75 0 0 1 0-1.06l6-6a.75.75 0 0 1 1.06 0Z"
+            />
+          </svg>
+        </button>
+
+        <div class="slider-stage">
+          <div class="slides-track" id="slidesTrack">
+            <section
+              class="slide is-active"
+              data-slide-name="Home"
+              data-slide-name-en="Home"
+              data-slide-name-zh="首页"
+            >
+              <div class="slide-panel intro-panel">
+                <div class="intro-copy">
+                  <p class="slide-kicker" data-i18n="introKicker">Personal Homepage</p>
+                  <h1>
+                    <span data-i18n="heroTitle">Hi, I'm Karry (zzuyu)</span>
+                    <span class="hero-wave" aria-hidden="true">👋</span>
+                  </h1>
+
+                  <div class="intro-block">
+                    <p class="intro-label">
+                      <span class="intro-inline-icon" aria-hidden="true">🚀</span>
+                      <span data-i18n="introLabel">Currently</span>
+                    </p>
+                    <p class="intro-text" data-i18n="introText" data-i18n-mode="html">
+                      I currently work on <strong>AI-related initiatives</strong> at
+                      <strong>HUAWEI</strong>, with a focus on <strong>ToB LLM applications</strong>
+                      and <strong>product design</strong>.
+                    </p>
+                    <p class="intro-quote" data-i18n="introQuote">
+                      “撇开老板的指令，撇开社会的规训，你到底想创造什么？”
+                    </p>
+                    <div class="intro-tags">
+                      <span class="intro-tag">
+                        <span class="intro-tag-icon" aria-hidden="true">
+                          <svg viewBox="0 0 24 24" focusable="false">
+                            <path
+                              d="M5.75 4.75h6.5c.55 0 1 .45 1 1v13.5h-8.5V5.75c0-.55.45-1 1-1Zm9 3h3.5c.55 0 1 .45 1 1v10.5h-4.5V7.75Zm-5.5 1.5h1.5v1.5h-1.5v-1.5Zm0 3h1.5v1.5h-1.5v-1.5Zm0 3h1.5v1.5h-1.5v-1.5Zm6-3h1.5v1.5h-1.5v-1.5Zm0 3h1.5v1.5h-1.5v-1.5Z"
+                            />
+                          </svg>
+                        </span>
+                        <span data-i18n="introTagCompany">Huawei</span>
+                      </span>
+                      <span class="intro-tag intro-tag-role">
+                        <span class="intro-tag-icon" aria-hidden="true">
+                          <svg viewBox="0 0 24 24" focusable="false">
+                            <path
+                              d="M9 4.75h6A2.25 2.25 0 0 1 17.25 7v1h1A1.75 1.75 0 0 1 20 9.75v7.5A1.75 1.75 0 0 1 18.25 19h-12.5A1.75 1.75 0 0 1 4 17.25v-7.5A1.75 1.75 0 0 1 5.75 8h1V7A2.25 2.25 0 0 1 9 4.75Zm0 1.5A.75.75 0 0 0 8.25 7v1h7.5V7A.75.75 0 0 0 15 6.25H9Zm-3.25 3.25a.25.25 0 0 0-.25.25v1.55h13v-1.55a.25.25 0 0 0-.25-.25h-12.5Zm12.75 3.3h-5.75v.45a.75.75 0 0 1-.75.75h-1a.75.75 0 0 1-.75-.75v-.45H5.5v4.45c0 .14.11.25.25.25h12.5a.25.25 0 0 0 .25-.25V12.8Z"
+                            />
+                          </svg>
+                        </span>
+                        <span data-i18n="introTagRole">LLM Algorithm Engineer &amp; Product Manager</span>
+                      </span>
+                      <span class="intro-tag">
+                        <span class="intro-tag-icon" aria-hidden="true">
+                          <svg viewBox="0 0 24 24" focusable="false">
+                            <path
+                              d="m12 3.5 1.89 4.61 4.61 1.89-4.61 1.89L12 16.5l-1.89-4.61L5.5 10l4.61-1.89L12 3.5Zm5.75 10.75 1.08 2.42 2.42 1.08-2.42 1.08-1.08 2.42-1.08-2.42-2.42-1.08 2.42-1.08 1.08-2.42ZM6.5 14l.86 1.89 1.89.86-1.89.86-.86 1.89-.86-1.89-1.89-.86 1.89-.86L6.5 14Z"
+                            />
+                          </svg>
+                        </span>
+                        <span data-i18n="introTagAICoding">AI Coding</span>
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="intro-links">
+                    <a class="mini-contact" href="mailto:nkuzhaozuyu@163.com">
+                      <span class="mini-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" focusable="false">
+                          <path
+                            d="M4 6.75h16a1.25 1.25 0 0 1 1.25 1.25v8A1.25 1.25 0 0 1 20 17.25H4A1.25 1.25 0 0 1 2.75 16V8A1.25 1.25 0 0 1 4 6.75Zm0 1.5a.25.25 0 0 0-.25.25v.2l8.25 5.2 8.25-5.2v-.2a.25.25 0 0 0-.25-.25H4Zm16.25 2.22-7.85 4.95a.75.75 0 0 1-.8 0l-7.85-4.95V16c0 .14.11.25.25.25h16a.25.25 0 0 0 .25-.25v-5.53Z"
+                          />
+                        </svg>
+                      </span>
+                      <span>nkuzhaozuyu@163.com</span>
+                    </a>
+
+                    <a class="mini-contact" href="tel:13042206993">
+                      <span class="mini-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" focusable="false">
+                          <path
+                            d="M6.94 3.75c.4 0 .76.24.92.61l1.25 2.93a1 1 0 0 1-.14 1l-1.35 1.72a14.42 14.42 0 0 0 6.37 6.37l1.72-1.35a1 1 0 0 1 1-.14l2.93 1.25a1 1 0 0 1 .61.92v2.2c0 .56-.46 1.02-1.02 1-9.01-.28-16.23-7.5-16.5-16.5a1 1 0 0 1 1-1.01h2.21Zm-.05 1.5H4.24c.34 7.89 6.62 14.17 14.51 14.51v-2.65l-2.47-1.05-1.84 1.45a1 1 0 0 1-1.06.11 15.93 15.93 0 0 1-7-7 1 1 0 0 1 .11-1.06l1.45-1.84-1.05-2.47Z"
+                          />
+                        </svg>
+                      </span>
+                      <span>13042206993</span>
+                    </a>
+
+                    <span class="mini-contact">
+                      <span class="mini-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" focusable="false">
+                          <path
+                            d="M12 2.75a9.25 9.25 0 0 0-2.92 18.03c.46.09.63-.2.63-.46v-1.62c-2.56.56-3.1-1.08-3.1-1.08-.42-1.06-1.02-1.34-1.02-1.34-.84-.57.06-.56.06-.56.92.07 1.4.94 1.4.94.82 1.39 2.15.99 2.68.76.08-.59.32-.99.58-1.22-2.04-.23-4.18-1.02-4.18-4.55 0-1 .36-1.82.94-2.46-.1-.23-.41-1.18.09-2.45 0 0 .77-.25 2.52.94A8.7 8.7 0 0 1 12 7.86c.77 0 1.55.1 2.28.3 1.75-1.19 2.52-.94 2.52-.94.5 1.27.19 2.22.1 2.45.58.64.94 1.46.94 2.46 0 3.54-2.14 4.31-4.19 4.54.33.29.62.84.62 1.7v2.52c0 .26.17.56.64.46A9.25 9.25 0 0 0 12 2.75Z"
+                          />
+                        </svg>
+                      </span>
+                      <span data-i18n="introGithub">GitHub / coming soon</span>
+                    </span>
+                  </div>
+                </div>
+
+                <aside class="intro-side">
+                  <div class="portrait-card">
+                    <img
+                      src="./assets/profile-photo.jpg"
+                      alt="Zhaozuyu portrait"
+                      data-i18n-alt="portraitAlt"
+                    />
+                  </div>
+                  <div class="journey-card" aria-label="Education and work path" data-i18n-aria-label="journeyAria">
+                    <div class="journey-line">
+                      <span>NKU</span>
+                      <span class="journey-arrow" aria-hidden="true">→</span>
+                      <span>CUHK</span>
+                      <span class="journey-arrow" aria-hidden="true">→</span>
+                      <span>HUAWEI</span>
+                    </div>
+                  </div>
+                </aside>
+              </div>
+            </section>
+
+            <section
+              class="slide"
+              data-slide-name="Experience"
+              data-slide-name-en="Experience"
+              data-slide-name-zh="经历"
+            >
+              <div class="slide-panel">
+                <div class="slide-header">
+                  <p class="slide-kicker" data-i18n="experienceKicker">Experience</p>
+                  <h2 data-i18n="experienceTitle">Huawei experience</h2>
+                </div>
+
+                <div class="experience-stack">
+                  <article class="experience-card">
+                    <div class="experience-top">
+                      <div class="experience-brand">
+                        <span class="experience-logo" aria-hidden="true">
+                          <img class="experience-logo-image" src="./华为图标.png" alt="" />
+                        </span>
+                        <div class="experience-brand-copy">
+                          <h3 data-i18n="experienceCurrentOrg">Huawei ICT BG</h3>
+                          <p data-i18n="experienceCurrentTeam">AI Algorithm Department</p>
+                        </div>
+                      </div>
+
+                      <div class="experience-meta">
+                        <span class="experience-pill" data-i18n="experienceCurrentTime">2023.03 - Present</span>
+                        <span class="experience-pill" data-i18n="experienceEmploymentType">Full-time</span>
+                      </div>
+                    </div>
+
+                    <p class="experience-role" data-i18n="experienceCurrentRole">
+                      AI Algorithm Engineer &amp; Maintenance AI Representative
+                    </p>
+
+                    <ul class="experience-points">
+                      <li data-i18n="experienceCurrentBullet1" data-i18n-mode="html">
+                        Mentored <strong>2 internal full-time employees</strong> and <strong>10+ external members</strong>,
+                        and led the full <strong>0→1 delivery</strong> of LLM-enabled maintenance AI capabilities,
+                        including <strong>knowledge Q&amp;A</strong> and <strong>domain agents</strong>.
+                      </li>
+
+                      <li data-i18n="experienceCurrentBullet2" data-i18n-mode="html">
+                        Stayed close to the business and identified technical problems from <strong>user value</strong>
+                        and <strong>business impact</strong>, receiving <strong>4 competitiveness awards</strong>, the
+                        internal <strong>Jiaxian Spark Pioneer</strong> recognition, and inclusion in the
+                        <strong>annual article selection</strong>.
+                      </li>
+
+                      <li data-i18n="experienceCurrentBullet3" data-i18n-mode="html">
+                        Built hands-on experience in <strong>LLM applications</strong>, <strong>agent frameworks</strong>,
+                        and <strong>scaffolding design</strong>, with end-to-end delivery experience in how applications
+                        collaborate with models in real workflows.
+                      </li>
+                    </ul>
+
+                    <div class="experience-awards">
+                      <span class="experience-awards-label" data-i18n="experienceAwardsLabel">Recognition</span>
+                      <div class="experience-awards-list">
+                        <span class="experience-award" data-i18n="experienceCurrentAward1">Outstanding Individual of the Year</span>
+                        <span class="experience-award" data-i18n="experienceCurrentAward2">Innovation &amp; Technology Breakthrough Award (Company)</span>
+                        <span class="experience-award" data-i18n="experienceCurrentAward3">R&amp;D Competitiveness Construction &amp; Capability Enhancement Award (ICT BG)</span>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="experience-card">
+                    <div class="experience-top">
+                      <div class="experience-brand">
+                        <span class="experience-logo" aria-hidden="true">
+                          <img class="experience-logo-image" src="./华为图标.png" alt="" />
+                        </span>
+                        <div class="experience-brand-copy">
+                          <h3 data-i18n="experiencePastOrg">Huawei ICT BG</h3>
+                          <p data-i18n="experiencePastTeam">Algorithm &amp; Technology Development Dept.</p>
+                        </div>
+                      </div>
+
+                      <div class="experience-meta">
+                        <span class="experience-pill" data-i18n="experiencePastTime">2021.03 - 2023.03</span>
+                        <span class="experience-pill" data-i18n="experienceEmploymentType">Full-time</span>
+                      </div>
+                    </div>
+
+                    <p class="experience-role" data-i18n="experiencePastRole">
+                      AI Algorithm Engineer (Natural Language Processing)
+                    </p>
+
+                    <ul class="experience-points">
+                      <li data-i18n="experiencePastBullet1" data-i18n-mode="html">
+                        Co-built a <strong>causal discovery algorithm</strong> based on self-supervised and contrastive
+                        learning, together with a <strong>document-level case extraction capability</strong> based on
+                        global pointers, reaching <strong>95%</strong> and <strong>81%</strong> accuracy, with
+                        <strong>four papers accepted</strong>.
+                      </li>
+
+                      <li data-i18n="experiencePastBullet2" data-i18n-mode="html">
+                        Built a <strong>causal graph</strong> from case data and landed the capability on Huawei's
+                        internal operations platform, achieving <strong>81%</strong> diagnosis accuracy and reducing
+                        annual cost by <strong>RMB 20 million</strong>.
+                      </li>
+                    </ul>
+
+                    <div class="experience-awards">
+                      <span class="experience-awards-label" data-i18n="experienceAwardsLabel">Recognition</span>
+                      <div class="experience-awards-list">
+                        <span class="experience-award" data-i18n="experiencePastAward1">Gold Team Award</span>
+                        <span class="experience-award" data-i18n="experiencePastAward2">Outstanding New Employee</span>
+                        <span class="experience-award" data-i18n="experiencePastAward3">Technology Innovation &amp; Breakthrough Award</span>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </section>
+
+            <section
+              class="slide"
+              data-slide-name="Papers"
+              data-slide-name-en="Papers"
+              data-slide-name-zh="论文"
+            >
+              <div class="slide-panel papers-panel">
+                <div class="slide-header">
+                  <p class="slide-kicker" data-i18n="papersKicker">Papers</p>
+                  <h2 data-i18n="papersTitle">Selected papers</h2>
+                </div>
+
+                <div class="papers-list">
+                  <article class="paper-item">
+                    <div class="paper-main">
+                      <h3 class="paper-title">
+                        Unleashing the Power of Language Models in Text-Attributed Graph
+                      </h3>
+                      <p class="paper-authors">
+                        Haoyu Kuang, Jiarong Xu, Haozhe Zhang, Zuyu Zhao, Qi Zhang, Xuanjing Huang,
+                        Zhongyu Wei
+                      </p>
+                      <p class="paper-meta">
+                        <span data-i18n="paper1Venue">Findings of EMNLP · 2023</span>
+                      </p>
+                    </div>
+
+                    <div class="paper-links">
+                      <a
+                        class="paper-link"
+                        href="https://aclanthology.org/2023.findings-emnlp.565/"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        data-i18n="paperLinkLabel"
+                      >
+                        View on ACL
+                      </a>
+                    </div>
+                  </article>
+
+                  <article class="paper-item">
+                    <div class="paper-main">
+                      <h3 class="paper-title">
+                        One-Model-Connects-All: A Unified Graph Pre-Training Model for Online
+                        Community Modeling
+                      </h3>
+                      <p class="paper-authors">
+                        Ruoxue Ma, Jiarong Xu, Xinnong Zhang, Haozhe Zhang, Zuyu Zhao, Qi Zhang,
+                        Xuanjing Huang, Zhongyu Wei
+                      </p>
+                      <p class="paper-meta">
+                        <span data-i18n="paper2Venue">Findings of EMNLP · 2023</span>
+                      </p>
+                    </div>
+
+                    <div class="paper-links">
+                      <a
+                        class="paper-link"
+                        href="https://aclanthology.org/2023.findings-emnlp.1003/"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        data-i18n="paperLinkLabel"
+                      >
+                        View on ACL
+                      </a>
+                    </div>
+                  </article>
+
+                  <article class="paper-item">
+                    <div class="paper-main">
+                      <h3 class="paper-title">
+                        Document-Level Relation Extraction via Pair-Aware and Entity-Enhanced
+                        Representation Learning
+                      </h3>
+                      <p class="paper-authors">
+                        Xiusheng Huang, Hang Yang, Yubo Chen, Jun Zhao, Kang Liu, Weijian Sun,
+                        Zuyu Zhao
+                      </p>
+                      <p class="paper-meta">
+                        <span data-i18n="paper3Venue">COLING · 2022</span>
+                      </p>
+                    </div>
+
+                    <div class="paper-links">
+                      <a
+                        class="paper-link"
+                        href="https://aclanthology.org/2022.coling-1.213/"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        data-i18n="paperLinkLabel"
+                      >
+                        View on ACL
+                      </a>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </section>
+
+            <section
+              class="slide"
+              data-slide-name="Projects"
+              data-slide-name-en="Projects"
+              data-slide-name-zh="项目"
+            >
+              <div class="slide-panel">
+                <div class="slide-header">
+                  <p class="slide-kicker" data-i18n="projectsKicker">Projects</p>
+                  <h2 data-i18n="projectsTitle">Selected projects</h2>
+                </div>
+
+                <div class="project-stack">
+                  <details class="project-showcase" open>
+                    <summary class="project-summary">
+                      <div class="project-summary-main">
+                        <span class="project-label" data-i18n="project1Label">2023 - Present</span>
+                        <h3 data-i18n="project1Title">LLM-enabled Maintenance AI Applications</h3>
+                      </div>
+                      <span class="project-expand" data-i18n="projectExpand">View details</span>
+                    </summary>
+
+                    <div class="project-body">
+                      <p class="project-overview" data-i18n="project1Desc" data-i18n-mode="html">
+                        Led the <strong>0→1 delivery</strong> of maintenance AI applications for
+                        <strong>ToB scenarios</strong>, including <strong>knowledge Q&amp;A</strong>
+                        and <strong>domain-agent workflows</strong>, while aligning model capability
+                        with real business needs.
+                      </p>
+
+                      <div class="project-actions">
+                        <span class="project-action is-placeholder" data-i18n="projectVideoPlaceholder">
+                          Video demo / coming soon
+                        </span>
+                        <span class="project-action is-placeholder" data-i18n="projectRepoPlaceholder">
+                          GitHub / private for now
+                        </span>
+                      </div>
+
+                      <div class="project-detail-list">
+                        <article class="project-detail-item">
+                          <span>01</span>
+                          <div>
+                            <h4 data-i18n="project1Detail1Title">Context</h4>
+                            <p data-i18n="project1Detail1Desc" data-i18n-mode="html">
+                              Maintenance scenarios involve dense domain knowledge and long workflows,
+                              making search and collaboration costly.
+                            </p>
+                          </div>
+                        </article>
+                        <article class="project-detail-item">
+                          <span>02</span>
+                          <div>
+                            <h4 data-i18n="project1Detail2Title">What I built</h4>
+                            <p data-i18n="project1Detail2Desc" data-i18n-mode="html">
+                              Designed and delivered <strong>knowledge Q&amp;A</strong>,
+                              <strong>domain-agent workflows</strong>, and supporting product flows.
+                            </p>
+                          </div>
+                        </article>
+                        <article class="project-detail-item">
+                          <span>03</span>
+                          <div>
+                            <h4 data-i18n="project1Detail3Title">How it worked</h4>
+                            <p data-i18n="project1Detail3Desc" data-i18n-mode="html">
+                              Focused on <strong>LLM application architecture</strong>,
+                              <strong>workflow orchestration</strong>, and the way products collaborate
+                              with models in real business systems.
+                            </p>
+                          </div>
+                        </article>
+                        <article class="project-detail-item">
+                          <span>04</span>
+                          <div>
+                            <h4 data-i18n="project1Detail4Title">Outcome</h4>
+                            <p data-i18n="project1Detail4Desc" data-i18n-mode="html">
+                              Completed the <strong>0→1 landing process</strong> while mentoring
+                              internal and external collaborators around the buildout.
+                            </p>
+                          </div>
+                        </article>
+                        <article class="project-detail-item">
+                          <span>05</span>
+                          <div>
+                            <h4 data-i18n="project1Detail5Title">Demo</h4>
+                            <p data-i18n="project1Detail5Desc" data-i18n-mode="html">
+                              Reserved for a short walkthrough video showing the workflow,
+                              interface, and reasoning path.
+                            </p>
+                          </div>
+                        </article>
+                      </div>
+                    </div>
+                  </details>
+
+                  <details class="project-showcase">
+                    <summary class="project-summary">
+                      <div class="project-summary-main">
+                        <span class="project-label" data-i18n="project2Label">2021 - 2023</span>
+                        <h3 data-i18n="project2Title">Causal Graph for Operations Diagnosis</h3>
+                      </div>
+                      <span class="project-expand" data-i18n="projectExpand">View details</span>
+                    </summary>
+
+                    <div class="project-body">
+                      <p class="project-overview" data-i18n="project2Desc" data-i18n-mode="html">
+                        Built a <strong>causal graph</strong> from case data and deployed it on
+                        Huawei's internal operations platform, improving diagnosis precision and
+                        turning research into measurable operational value.
+                      </p>
+
+                      <div class="project-actions">
+                        <span class="project-action is-placeholder" data-i18n="projectVideoPlaceholder">
+                          Video demo / coming soon
+                        </span>
+                        <span class="project-action is-placeholder" data-i18n="projectRepoPlaceholder">
+                          GitHub / private for now
+                        </span>
+                      </div>
+
+                      <div class="project-detail-list">
+                        <article class="project-detail-item">
+                          <span>01</span>
+                          <div>
+                            <h4 data-i18n="project2Detail1Title">Context</h4>
+                            <p data-i18n="project2Detail1Desc" data-i18n-mode="html">
+                              Case knowledge was difficult to reuse, and diagnosis often depended on
+                              expert experience.
+                            </p>
+                          </div>
+                        </article>
+                        <article class="project-detail-item">
+                          <span>02</span>
+                          <div>
+                            <h4 data-i18n="project2Detail2Title">What I built</h4>
+                            <p data-i18n="project2Detail2Desc" data-i18n-mode="html">
+                              Structured case data into a <strong>causal graph</strong> and pushed
+                              the capability into an internal operations workflow.
+                            </p>
+                          </div>
+                        </article>
+                        <article class="project-detail-item">
+                          <span>03</span>
+                          <div>
+                            <h4 data-i18n="project2Detail3Title">Method</h4>
+                            <p data-i18n="project2Detail3Desc" data-i18n-mode="html">
+                              Connected case mining, relation construction, and graph-based reasoning
+                              into a usable diagnosis path.
+                            </p>
+                          </div>
+                        </article>
+                        <article class="project-detail-item">
+                          <span>04</span>
+                          <div>
+                            <h4 data-i18n="project2Detail4Title">Outcome</h4>
+                            <p data-i18n="project2Detail4Desc" data-i18n-mode="html">
+                              Reached <strong>81% diagnosis accuracy</strong> and reduced annual cost
+                              by <strong>RMB 20 million</strong>.
+                            </p>
+                          </div>
+                        </article>
+                        <article class="project-detail-item">
+                          <span>05</span>
+                          <div>
+                            <h4 data-i18n="project2Detail5Title">Demo</h4>
+                            <p data-i18n="project2Detail5Desc" data-i18n-mode="html">
+                              Reserved for a demo showing the graph structure, diagnosis path, and
+                              internal workflow.
+                            </p>
+                          </div>
+                        </article>
+                      </div>
+                    </div>
+                  </details>
+
+                  <details class="project-showcase">
+                    <summary class="project-summary">
+                      <div class="project-summary-main">
+                        <span class="project-label" data-i18n="project3Label">2021 - 2023</span>
+                        <h3 data-i18n="project3Title">Document-level Extraction & Causal Discovery</h3>
+                      </div>
+                      <span class="project-expand" data-i18n="projectExpand">View details</span>
+                    </summary>
+
+                    <div class="project-body">
+                      <p class="project-overview" data-i18n="project3Desc" data-i18n-mode="html">
+                        Co-built document-level extraction and causal discovery capabilities with
+                        academic collaborators, connecting applied NLP research with production-oriented
+                        problem solving.
+                      </p>
+
+                      <div class="project-actions">
+                        <span class="project-action is-placeholder" data-i18n="projectVideoPlaceholder">
+                          Video demo / coming soon
+                        </span>
+                        <a
+                          class="project-action"
+                          href="https://aclanthology.org/people/zuyu-zhao/"
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          data-i18n="projectPaperLink"
+                        >
+                          Papers / ACL
+                        </a>
+                      </div>
+
+                      <div class="project-detail-list">
+                        <article class="project-detail-item">
+                          <span>01</span>
+                          <div>
+                            <h4 data-i18n="project3Detail1Title">Context</h4>
+                            <p data-i18n="project3Detail1Desc" data-i18n-mode="html">
+                              Long-form case documents needed to be converted into structured signals
+                              for downstream reasoning and diagnosis.
+                            </p>
+                          </div>
+                        </article>
+                        <article class="project-detail-item">
+                          <span>02</span>
+                          <div>
+                            <h4 data-i18n="project3Detail2Title">What I built</h4>
+                            <p data-i18n="project3Detail2Desc" data-i18n-mode="html">
+                              Worked on <strong>document-level case extraction</strong> and
+                              <strong>causal discovery</strong> together with university partners.
+                            </p>
+                          </div>
+                        </article>
+                        <article class="project-detail-item">
+                          <span>03</span>
+                          <div>
+                            <h4 data-i18n="project3Detail3Title">Method</h4>
+                            <p data-i18n="project3Detail3Desc" data-i18n-mode="html">
+                              Combined <strong>global pointer</strong>,
+                              <strong>self-supervised learning</strong>, and
+                              <strong>contrastive learning</strong> for applied NLP tasks.
+                            </p>
+                          </div>
+                        </article>
+                        <article class="project-detail-item">
+                          <span>04</span>
+                          <div>
+                            <h4 data-i18n="project3Detail4Title">Outcome</h4>
+                            <p data-i18n="project3Detail4Desc" data-i18n-mode="html">
+                              Reached <strong>95%</strong> and <strong>81%</strong> accuracy on key
+                              tasks and contributed to <strong>four accepted papers</strong>.
+                            </p>
+                          </div>
+                        </article>
+                        <article class="project-detail-item">
+                          <span>05</span>
+                          <div>
+                            <h4 data-i18n="project3Detail5Title">Demo</h4>
+                            <p data-i18n="project3Detail5Desc" data-i18n-mode="html">
+                              Reserved for a short explanation video linking the research pipeline to
+                              the actual business problem.
+                            </p>
+                          </div>
+                        </article>
+                      </div>
+                    </div>
+                  </details>
+                </div>
+              </div>
+            </section>
+
+            <section
+              class="slide"
+              data-slide-name="Blog"
+              data-slide-name-en="Blog"
+              data-slide-name-zh="博客"
+            >
+              <div class="slide-panel blog-panel">
+                <div class="slide-header">
+                  <p class="slide-kicker" data-i18n="blogKicker">Blog</p>
+                  <h2 data-i18n="blogTitle">Latest writing</h2>
+                </div>
+
+                <div class="blog-scroll">
+                  <div class="blog-index" id="blogIndex">
+                    <a class="blog-card" href="./blog/imagination-is-all-you-need.html">
+                      <p class="blog-card-date">2026-03-13</p>
+                      <h3 class="blog-card-title" data-i18n="blogArticle2Title">
+                        Imagination Is All You Need：AI 时代，想象力成为新的稀缺品
+                      </h3>
+                      <p class="blog-card-summary" data-i18n="blogCard2Summary">
+                        当执行被 AI 不断压缩之后，真正重新变得稀缺的，也许是想象力，以及一个人想把什么带进这个世界。
+                      </p>
+                      <span class="blog-card-link" data-i18n="blogOpen">阅读全文</span>
+                    </a>
+                    <a class="blog-card" href="./blog/ai-agent-gap.html">
+                      <p class="blog-card-date">2025-08-18</p>
+                      <h3 class="blog-card-title" data-i18n="blogArticleTitle">
+                        AI Agent 大热背后的冷思考：技术理想与业务落地的鸿沟如何跨越？
+                      </h3>
+                      <p class="blog-card-summary" data-i18n="blogCardSummary">
+                        从 ToB 视角讨论 AI Agent 的冷热反差、套壳式繁荣，以及业务落地中“短期做薄、长期做厚”的实践路径。
+                      </p>
+                      <span class="blog-card-link" data-i18n="blogOpen">阅读全文</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section
+              class="slide"
+              data-slide-name="Contact"
+              data-slide-name-en="Contact"
+              data-slide-name-zh="联系"
+            >
+              <div class="slide-panel">
+                <div class="slide-header">
+                  <p class="slide-kicker" data-i18n="contactKicker">Contact</p>
+                  <h2 data-i18n="contactTitle">Contact</h2>
+                </div>
+
+                <div class="contact-grid">
+                  <a class="contact-card" href="mailto:nkuzhaozuyu@163.com">
+                    <span class="contact-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" focusable="false">
+                        <path
+                          d="M4 6.75h16a1.25 1.25 0 0 1 1.25 1.25v8A1.25 1.25 0 0 1 20 17.25H4A1.25 1.25 0 0 1 2.75 16V8A1.25 1.25 0 0 1 4 6.75Zm0 1.5a.25.25 0 0 0-.25.25v.2l8.25 5.2 8.25-5.2v-.2a.25.25 0 0 0-.25-.25H4Zm16.25 2.22-7.85 4.95a.75.75 0 0 1-.8 0l-7.85-4.95V16c0 .14.11.25.25.25h16a.25.25 0 0 0 .25-.25v-5.53Z"
+                        />
+                      </svg>
+                    </span>
+                    <span class="contact-text">nkuzhaozuyu@163.com</span>
+                  </a>
+
+                  <a class="contact-card" href="tel:13042206993">
+                    <span class="contact-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" focusable="false">
+                        <path
+                          d="M6.94 3.75c.4 0 .76.24.92.61l1.25 2.93a1 1 0 0 1-.14 1l-1.35 1.72a14.42 14.42 0 0 0 6.37 6.37l1.72-1.35a1 1 0 0 1 1-.14l2.93 1.25a1 1 0 0 1 .61.92v2.2c0 .56-.46 1.02-1.02 1-9.01-.28-16.23-7.5-16.5-16.5a1 1 0 0 1 1-1.01h2.21Zm-.05 1.5H4.24c.34 7.89 6.62 14.17 14.51 14.51v-2.65l-2.47-1.05-1.84 1.45a1 1 0 0 1-1.06.11 15.93 15.93 0 0 1-7-7 1 1 0 0 1 .11-1.06l1.45-1.84-1.05-2.47Z"
+                        />
+                      </svg>
+                    </span>
+                    <span class="contact-text">13042206993</span>
+                  </a>
+
+                  <span class="contact-card">
+                    <span class="contact-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" focusable="false">
+                        <path
+                          d="M12 2.75a9.25 9.25 0 0 0-2.92 18.03c.46.09.63-.2.63-.46v-1.62c-2.56.56-3.1-1.08-3.1-1.08-.42-1.06-1.02-1.34-1.02-1.34-.84-.57.06-.56.06-.56.92.07 1.4.94 1.4.94.82 1.39 2.15.99 2.68.76.08-.59.32-.99.58-1.22-2.04-.23-4.18-1.02-4.18-4.55 0-1 .36-1.82.94-2.46-.1-.23-.41-1.18.09-2.45 0 0 .77-.25 2.52.94A8.7 8.7 0 0 1 12 7.86c.77 0 1.55.1 2.28.3 1.75-1.19 2.52-.94 2.52-.94.5 1.27.19 2.22.1 2.45.58.64.94 1.46.94 2.46 0 3.54-2.14 4.31-4.19 4.54.33.29.62.84.62 1.7v2.52c0 .26.17.56.64.46A9.25 9.25 0 0 0 12 2.75Z"
+                        />
+                      </svg>
+                    </span>
+                    <span class="contact-text" data-i18n="contactGithub">GitHub / coming soon</span>
+                  </span>
+
+                  <span class="contact-card">
+                    <span class="contact-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" focusable="false">
+                        <path
+                          d="M6.25 5.75h7.5a3.5 3.5 0 0 1 3.5 3.5v5.5a3.5 3.5 0 0 1-3.5 3.5h-7.5a3.5 3.5 0 0 1-3.5-3.5v-5.5a3.5 3.5 0 0 1 3.5-3.5Zm0 1.5a2 2 0 0 0-2 2v5.5a2 2 0 0 0 2 2h7.5a2 2 0 0 0 2-2V9.25a2 2 0 0 0-2-2h-7.5Zm12.44 1.28 2.03-1.17a.75.75 0 0 1 1.12.65v8a.75.75 0 0 1-1.12.65l-2.03-1.17V8.53Zm-8.19 1.72a2.75 2.75 0 1 1 0 5.5 2.75 2.75 0 0 1 0-5.5Zm0 1.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Z"
+                        />
+                      </svg>
+                    </span>
+                    <span class="contact-text" data-i18n="contactVideo">Video / coming soon</span>
+                  </span>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <button
+          class="slide-arrow slide-arrow-right"
+          id="nextSlide"
+          type="button"
+          aria-label="Next slide"
+          data-i18n-aria-label="nextSlideAria"
+        >
+          <svg viewBox="0 0 24 24" focusable="false">
+            <path
+              d="M9.22 5.47a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 1 1-1.06-1.06L14.69 12 9.22 6.53a.75.75 0 0 1 0-1.06Z"
+            />
+          </svg>
+        </button>
+
+        <div class="slider-meta">
+          <span class="slide-counter" id="slideCounter">01 / 06</span>
+          <span class="slide-name" id="slideName">Home</span>
+        </div>
+      </main>
+    </div>
+
+    <script src="./script.js?v=20260313-6"></script>
+  </body>
+</html>

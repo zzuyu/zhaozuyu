@@ -1,0 +1,11 @@
+<svg width="960" height="1200" viewBox="0 0 960 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="1200" fill="#EDE6DB"/>
+  <rect x="56" y="56" width="848" height="1088" rx="36" fill="#F8F4EC" stroke="#D4C6B5"/>
+  <circle cx="480" cy="404" r="164" fill="#DCCCB8"/>
+  <path d="M248 932C248 768.607 380.607 636 544 636H416C579.393 636 712 768.607 712 932V980H248V932Z" fill="#C3A487"/>
+  <path d="M374 396C374 336.906 421.906 289 481 289C540.094 289 588 336.906 588 396V464C588 523.094 540.094 571 481 571C421.906 571 374 523.094 374 464V396Z" fill="#F3E8DB"/>
+  <path d="M333 1026H627" stroke="#B69475" stroke-width="3" stroke-linecap="round"/>
+  <path d="M332 1068H628" stroke="#D1B79F" stroke-width="3" stroke-linecap="round"/>
+  <text x="480" y="160" text-anchor="middle" fill="#876247" font-family="Arial, sans-serif" font-size="28" letter-spacing="6">YOUR PORTRAIT</text>
+  <text x="480" y="198" text-anchor="middle" fill="#9B8979" font-family="Arial, sans-serif" font-size="18" letter-spacing="3">replace with a daily-life photo</text>
+</svg>

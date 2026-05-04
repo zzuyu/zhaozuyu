@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3600" height="1400" viewBox="0 0 3600 1400" fill="none">
+  <defs>
+    <filter id="blur-xxl" x="-20%" y="-80%" width="140%" height="260%">
+      <feGaussianBlur stdDeviation="150" />
+    </filter>
+    <filter id="blur-xl" x="-20%" y="-60%" width="140%" height="220%">
+      <feGaussianBlur stdDeviation="92" />
+    </filter>
+    <filter id="blur-lg" x="-20%" y="-50%" width="140%" height="200%">
+      <feGaussianBlur stdDeviation="52" />
+    </filter>
+    <filter id="blur-md" x="-20%" y="-40%" width="140%" height="180%">
+      <feGaussianBlur stdDeviation="18" />
+    </filter>
+    <linearGradient id="halo-spectrum" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#2a47c7" stop-opacity="0.56" />
+      <stop offset="18%" stop-color="#4c73ff" stop-opacity="0.74" />
+      <stop offset="38%" stop-color="#cfe2ff" stop-opacity="0.92" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.98" />
+      <stop offset="62%" stop-color="#d6f6ff" stop-opacity="0.86" />
+      <stop offset="80%" stop-color="#1fd3be" stop-opacity="0.72" />
+      <stop offset="100%" stop-color="#8f3656" stop-opacity="0.5" />
+    </linearGradient>
+    <linearGradient id="dust-spectrum" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#4068ff" stop-opacity="0.56" />
+      <stop offset="24%" stop-color="#8fb8ff" stop-opacity="0.72" />
+      <stop offset="48%" stop-color="#f8fbff" stop-opacity="1" />
+      <stop offset="70%" stop-color="#9feadf" stop-opacity="0.66" />
+      <stop offset="100%" stop-color="#b34f77" stop-opacity="0.42" />
+    </linearGradient>
+  </defs>
+
+  <g opacity="0.98">
+    <ellipse cx="1800" cy="730" rx="1820" ry="288" fill="url(#halo-spectrum)" filter="url(#blur-xxl)" opacity="0.72" />
+    <ellipse cx="1760" cy="720" rx="1550" ry="188" fill="url(#dust-spectrum)" filter="url(#blur-xl)" opacity="0.86" />
+    <ellipse cx="1780" cy="708" rx="1420" ry="100" fill="url(#halo-spectrum)" filter="url(#blur-lg)" opacity="0.94" />
+    <ellipse cx="1800" cy="704" rx="1160" ry="38" fill="#f8fbff" filter="url(#blur-md)" opacity="0.78" />
+  </g>
+
+  <g opacity="0.82">
+    <ellipse cx="520" cy="804" rx="280" ry="130" fill="#446dff" filter="url(#blur-xl)" opacity="0.46" />
+    <ellipse cx="870" cy="760" rx="260" ry="120" fill="#7fa7ff" filter="url(#blur-xl)" opacity="0.48" />
+    <ellipse cx="1210" cy="724" rx="300" ry="138" fill="#ffffff" filter="url(#blur-xl)" opacity="0.5" />
+    <ellipse cx="1620" cy="698" rx="300" ry="132" fill="#dff3ff" filter="url(#blur-xl)" opacity="0.42" />
+    <ellipse cx="2110" cy="660" rx="280" ry="132" fill="#59d7c5" filter="url(#blur-xl)" opacity="0.42" />
+    <ellipse cx="2590" cy="626" rx="260" ry="132" fill="#a64d72" filter="url(#blur-xl)" opacity="0.34" />
+    <ellipse cx="3020" cy="594" rx="240" ry="126" fill="#d7efff" filter="url(#blur-xl)" opacity="0.24" />
+  </g>
+
+  <g filter="url(#blur-md)" opacity="0.78">
+    <circle cx="364" cy="830" r="18" fill="#f8fbff" fill-opacity="0.34" />
+    <circle cx="498" cy="804" r="12" fill="#9bc1ff" fill-opacity="0.32" />
+    <circle cx="618" cy="790" r="20" fill="#ffffff" fill-opacity="0.28" />
+    <circle cx="764" cy="772" r="14" fill="#cae0ff" fill-opacity="0.28" />
+    <circle cx="898" cy="754" r="22" fill="#ffffff" fill-opacity="0.32" />
+    <circle cx="1036" cy="738" r="16" fill="#8ab2ff" fill-opacity="0.28" />
+    <circle cx="1174" cy="722" r="24" fill="#ffffff" fill-opacity="0.36" />
+    <circle cx="1314" cy="708" r="18" fill="#d9ebff" fill-opacity="0.3" />
+    <circle cx="1478" cy="694" r="24" fill="#ffffff" fill-opacity="0.34" />
+    <circle cx="1628" cy="680" r="14" fill="#bce8ff" fill-opacity="0.28" />
+    <circle cx="1788" cy="668" r="26" fill="#ffffff" fill-opacity="0.4" />
+    <circle cx="1946" cy="650" r="18" fill="#dcf8ff" fill-opacity="0.26" />
+    <circle cx="2118" cy="632" r="22" fill="#72e0cf" fill-opacity="0.28" />
+    <circle cx="2290" cy="612" r="16" fill="#ffffff" fill-opacity="0.22" />
+    <circle cx="2464" cy="596" r="20" fill="#ffd7e2" fill-opacity="0.18" />
+    <circle cx="2638" cy="578" r="24" fill="#ffffff" fill-opacity="0.16" />
+    <circle cx="2812" cy="562" r="16" fill="#cbebff" fill-opacity="0.14" />
+    <circle cx="2996" cy="548" r="14" fill="#ffffff" fill-opacity="0.12" />
+  </g>
+
+  <g opacity="0.44">
+    <circle cx="320" cy="834" r="3.2" fill="#ffffff" />
+    <circle cx="396" cy="820" r="2.8" fill="#dbe8ff" />
+    <circle cx="472" cy="804" r="2.4" fill="#93b5ff" />
+    <circle cx="546" cy="792" r="2.6" fill="#ffffff" />
+    <circle cx="626" cy="784" r="2.3" fill="#ffffff" />
+    <circle cx="708" cy="774" r="2.8" fill="#b7d3ff" />
+    <circle cx="792" cy="760" r="2.4" fill="#ffffff" />
+    <circle cx="882" cy="748" r="2.8" fill="#ffffff" />
+    <circle cx="972" cy="736" r="2.5" fill="#dceeff" />
+    <circle cx="1068" cy="726" r="3" fill="#ffffff" />
+    <circle cx="1166" cy="716" r="2.4" fill="#9cbfff" />
+    <circle cx="1268" cy="706" r="3.2" fill="#ffffff" />
+    <circle cx="1372" cy="698" r="2.6" fill="#ffffff" />
+    <circle cx="1484" cy="688" r="2.8" fill="#e8f3ff" />
+    <circle cx="1596" cy="678" r="2.6" fill="#ffffff" />
+    <circle cx="1710" cy="668" r="3.2" fill="#ffffff" />
+    <circle cx="1824" cy="656" r="2.6" fill="#dff8ff" />
+    <circle cx="1942" cy="644" r="2.8" fill="#ffffff" />
+    <circle cx="2060" cy="630" r="2.8" fill="#a4eadf" />
+    <circle cx="2182" cy="618" r="2.6" fill="#ffffff" />
+    <circle cx="2310" cy="604" r="2.4" fill="#ffffff" />
+    <circle cx="2446" cy="592" r="2.6" fill="#cde7ff" />
+    <circle cx="2582" cy="580" r="2.8" fill="#f1cad7" />
+    <circle cx="2720" cy="566" r="2.4" fill="#ffffff" />
+    <circle cx="2862" cy="554" r="2.6" fill="#ffffff" />
+    <circle cx="3008" cy="542" r="2.3" fill="#dff0ff" />
+    <circle cx="3148" cy="528" r="2.6" fill="#ffffff" />
+    <circle cx="3286" cy="516" r="2.4" fill="#ffffff" />
+  </g>
+</svg>
