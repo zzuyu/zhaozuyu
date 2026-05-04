@@ -385,12 +385,22 @@ const updateSlider = (nextIndex) => {
   slidesTrack.style.transform = `translateX(-${activeIndex * 100}%)`;
 
   slides.forEach((slide, index) => {
-    slide.classList.toggle("is-active", index === activeIndex);
+    const isActive = index === activeIndex;
+    slide.classList.toggle("is-active", isActive);
+    slide.setAttribute("aria-hidden", String(!isActive));
+    slide.inert = !isActive;
   });
 
   navButtons.forEach((button) => {
     const target = Number(button.dataset.slideTarget);
-    button.classList.toggle("is-active", target === activeIndex);
+    const isActive = target === activeIndex;
+    button.classList.toggle("is-active", isActive);
+    if (isActive) {
+      button.setAttribute("aria-current", "page");
+      return;
+    }
+
+    button.removeAttribute("aria-current");
   });
 
   if (slideCounter) {
