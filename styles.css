@@ -633,10 +633,10 @@ p {
 
 .portrait-card img {
   width: 100%;
-  aspect-ratio: 0.84;
-  object-fit: cover;
-  object-position: center 18%;
-  transform: scale(1.01);
+  height: auto;
+  aspect-ratio: 1236 / 1988;
+  object-fit: contain;
+  object-position: center top;
   transition: transform 520ms ease;
 }
 
@@ -734,11 +734,10 @@ p {
 }
 
 .experience-logo-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  transform: scale(1.1);
+  width: 78%;
+  height: 78%;
+  object-fit: contain;
+  object-position: center;
 }
 
 .experience-brand-copy {

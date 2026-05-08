@@ -13,7 +13,7 @@ const i18nElements = Array.from(document.querySelectorAll("[data-i18n]"));
 const i18nAriaElements = Array.from(document.querySelectorAll("[data-i18n-aria-label]"));
 const i18nAltElements = Array.from(document.querySelectorAll("[data-i18n-alt]"));
 
-const languageStorageKey = "personal-homepage-language";
+const languageStorageKey = "personal-homepage-language-v2";
 const slideRouteMap = {
   home: 0,
   experience: 1,
@@ -36,9 +36,8 @@ const translations = {
     heroTitle: "Hi, I'm Karry (zzuyu)",
     introLabel: "Currently",
     introText:
-      "I currently work on <strong>AI-related initiatives</strong> at <strong>HUAWEI</strong>, with a focus on <strong>ToB LLM applications</strong> and <strong>product design</strong>.",
-    introQuote:
-      '"Beyond the instructions of a boss and the conditioning of society, what do you actually want to create?"',
+      "I currently work on <strong>AI-related initiatives</strong> at <strong>HUAWEI</strong>.",
+    introQuote: "A dusted hem, softly weathered by the road. : )",
     introTagCompany: "Huawei",
     introTagRole: "LLM Algorithm Engineer & Product Manager",
     introTagAICoding: "AI Coding",
@@ -58,28 +57,28 @@ const translations = {
     experienceCurrentOrg: "Huawei ICT BG",
     experienceCurrentTeam: "AI Algorithm Department",
     experienceCurrentTime: "2023.03 - Present",
-    experienceCurrentRole: "AI Algorithm Engineer & Maintenance AI Representative",
+    experienceCurrentRole: "AI Product Manager",
     experienceCurrentBullet1:
-      "Mentored <strong>2 internal full-time employees</strong> and <strong>1 intern</strong>, and led the full <strong>0→1 delivery</strong> of LLM-enabled maintenance AI capabilities, including <strong>knowledge Q&amp;A</strong> and <strong>domain agents</strong>.",
+      "Represented the department in serving Huawei's maintenance business (<strong>xxx billion RMB annual revenue</strong>), mapped engineer workflows into high-value AI scenarios such as knowledge reuse, issue handling, and risk sensing, and drove <strong>RAG</strong> / <strong>Agent</strong> applications from <strong>0→1</strong>.",
     experienceCurrentBullet2:
-      "Stayed close to the business and identified technical problems from <strong>user value</strong> and <strong>business impact</strong>, receiving <strong>4 competitiveness awards</strong>, the internal <strong>Jiaxian Spark Pioneer</strong> recognition, and inclusion in the <strong>annual article selection</strong>.",
+      "Worked deeply with <strong>sales</strong>, <strong>service</strong>, and other business stakeholders, translated frontline needs into product requirements, scenario priorities, and iteration direction, improving product fit with real maintenance workflows.",
     experienceCurrentBullet3:
-      "Built hands-on experience in <strong>LLM applications</strong>, <strong>agent frameworks</strong>, and <strong>scaffolding design</strong>, with end-to-end delivery experience in how applications collaborate with models in real workflows.",
-    experienceCurrentAward1: "Outstanding Individual of the Year",
-    experienceCurrentAward2: "Innovation & Technology Breakthrough Award (Company)",
-    experienceCurrentAward3: "R&D Competitiveness Construction & Capability Enhancement Award (ICT BG)",
+      "Managed a <strong>10-person delivery team</strong> (4 internal + 6 external), driving task breakdown, delivery cadence, cross-module collaboration, and acceptance across algorithm, engineering, and knowledge-building roles.",
+    experienceCurrentAward1: "Maintenance AI 0→1",
+    experienceCurrentAward2: "Cross-functional delivery",
+    experienceCurrentAward3: "RAG / Agent productization",
     experiencePastOrg: "Huawei ICT BG",
     experiencePastTeam: "Algorithm & Technology Development Dept.",
     experiencePastTime: "2021.03 - 2023.03",
     experiencePastRole: "AI Algorithm Engineer (Natural Language Processing)",
     experiencePastBullet1:
-      "Co-built a <strong>causal discovery algorithm</strong> based on self-supervised and contrastive learning, together with a <strong>document-level case extraction capability</strong> based on global pointers, reaching <strong>95%</strong> and <strong>81%</strong> accuracy, with <strong>four papers accepted</strong>.",
+      "Abstracted business scenarios into <strong>algorithmic solutions</strong>, defined model evaluation, delivery acceptance, and online bad-case analysis, and embedded AI capabilities into business workflows.",
     experiencePastBullet2:
-      "Built a <strong>causal graph</strong> from case data and landed the capability on Huawei's internal operations platform, achieving <strong>81%</strong> diagnosis accuracy and reducing annual cost by <strong>RMB 20 million</strong>.",
+      "Served as Huawei's <strong>university collaboration project manager</strong>, connecting CUHK-Shenzhen, Fudan University, and CASIA on <strong>N+1 technical exploration</strong>, contributing to 3 accepted papers and business-platform landing.",
     experienceAwardsLabel: "Recognition",
-    experiencePastAward1: "Gold Team Award",
-    experiencePastAward2: "Outstanding New Employee",
-    experiencePastAward3: "Technology Innovation & Breakthrough Award",
+    experiencePastAward1: "Business-to-algorithm abstraction",
+    experiencePastAward2: "University collaboration manager",
+    experiencePastAward3: "N+1 technical exploration",
     papersKicker: "Papers",
     papersTitle: "Selected papers",
     paperRoleLabel: "Co-author",
@@ -92,64 +91,55 @@ const translations = {
     projectExpand: "View details",
     projectVideoPlaceholder: "Video demo / coming soon",
     projectRepoPlaceholder: "GitHub / private for now",
-    projectPaperLink: "Papers / ACL",
-    project1Label: "2026.1 - Present",
-    project1Title: "IP Risk Sensing for Data Communication Networks",
+    projectPaperLink: "Internal / private",
+    project1Label: "2024.01 - 2025.12",
+    project1Title: "Huawei Service-Domain Knowledge Extraction | AI Knowledge Engineering",
     project1Desc:
-      "For Huawei's <strong>data communication IP scenarios</strong>, built on the <strong>OpenCode programming agent framework</strong> and combined <strong>skills</strong> to enable network reconstruction and risk sensing.",
-    project1Detail1Title: "Context",
+      "Built an <strong>AI knowledge-engineering</strong> product for Huawei service and maintenance scenarios, turning issue tickets, FAQs, and expert experience into reusable knowledge assets for downstream LLM applications.",
+    project1Detail1Title: "Business context",
     project1Detail1Desc:
-      "Huawei's <strong>data communication IP networks</strong> contain many hidden risks, and a single large-scale failure can directly affect critical public services. Traditional rule-based, customized solutions are slow to build, narrow in coverage, and weak at detecting <strong>network-level risks</strong>.",
-    project1Detail2Title: "What I built",
+      "Huawei customer maintenance is an important ICT revenue unit. Engineers mainly rely on cases and experience when resolving issues, while case-to-ticket coverage remains low (<strong>&lt;xx%</strong>), fault-tree nodes accumulate below <strong>xx million</strong>, and Q&amp;A pairs are still largely written by experts.",
+    project1Detail2Title: "Technical solution",
     project1Detail2Desc:
-      "Aligned business-scenario requirements from <strong>0→1</strong> and used <strong>AI Coding</strong> to design the overall architecture and implementation approach for the AI application.",
-    project1Detail3Title: "How it worked",
+      "Defined cleaning, chunking, desensitization, and field-normalization flows for issue tickets and attachments; combined <strong>domain models + general models</strong>; and used multi-stage splitting, iterative extraction, and merge validation to trade compute for extraction quality.",
+    project1Detail3Title: "Evaluation & feedback",
     project1Detail3Desc:
-      "Used <strong>OpenCode</strong> and other open-source agent frameworks as the runtime, then built <strong>skills</strong> for network reconstruction modeling and risk identification based on the six-layer data communication IP architecture: <strong>Physical → Link → IGP → MPLS → BGP → VPN</strong>.",
-    project1Detail4Title: "Outcome",
+      "Built layered metrics across <strong>extraction accuracy</strong>, extraction quality, case increment, and manpower reduction; used online bad cases and expert labeling to fine-tune models; and embedded silent feedback into engineer workflows to form a data flywheel.",
+    project1Detail4Title: "Business impact",
     project1Detail4Desc:
-      "Completed the <strong>0→1 landing process</strong> while mentoring internal and external collaborators around the buildout.",
-    project1Detail5Title: "Demo",
-    project1Detail5Desc:
-      "Reserved for a short walkthrough video showing the workflow, interface, and reasoning path.",
-    project2Label: "2021 - 2023",
-    project2Title: "Causal Graph for Operations Diagnosis",
+      "Shifted case production from human writing to human review, improving efficiency by <strong>xx×</strong>; improved organizational knowledge-asset accumulation by <strong>xx×</strong>, saved <strong>x person-days/year</strong>, reduced knowledge investment by <strong>xkw</strong>, and improved downstream AI accuracy by <strong>x%-xx%</strong>.",
+    project2Label: "2024.03 - Present",
+    project2Title: "ICT Domain Knowledge Q&A | RAG, Deep Research",
     project2Desc:
-      "Built a <strong>causal graph</strong> from case data and deployed it on Huawei's internal operations platform, improving diagnosis precision and turning research into measurable operational value.",
-    project2Detail1Title: "Context",
+      "Productized a <strong>RAG + Deep Research</strong> knowledge assistant for ICT maintenance scenarios, helping engineers and partners retrieve experience knowledge, locate issues, and reuse answers.",
+    project2Detail1Title: "Business context",
     project2Detail1Desc:
-      "Case knowledge was difficult to reuse, and diagnosis often depended on expert experience.",
-    project2Detail2Title: "What I built",
+      "Knowledge acquisition through Q&amp;A is a high-frequency domain scenario, but users face scattered entry points, weak intelligence, and insufficient accuracy in traditional FAQ systems.",
+    project2Detail2Title: "Technical solution",
     project2Detail2Desc:
-      "Structured case data into a <strong>causal graph</strong> and pushed the capability into an internal operations workflow.",
-    project2Detail3Title: "Method",
+      "Implemented intent-aware refined recall with LLM sliding-window composition, reaching <strong>90%+</strong> multi-level product-category recognition; built <strong>BM25 + vector retrieval</strong>; embedded URL/image placeholders; and used <strong>CO-STAR prompt</strong> design for structured, illustrated answers.",
+    project2Detail3Title: "Evaluation & feedback",
     project2Detail3Desc:
-      "Connected case mining, relation construction, and graph-based reasoning into a usable diagnosis path.",
-    project2Detail4Title: "Outcome",
+      "Defined layered metrics for intent, retrieval, answer accuracy, deflection rate, and user experience; built an online logging and bad-case attribution mechanism to locate intent errors, recall misses, and hallucinations within minutes.",
+    project2Detail4Title: "Business impact",
     project2Detail4Desc:
-      "Reached <strong>81% diagnosis accuracy</strong> and reduced annual cost by <strong>RMB 20 million</strong>.",
-    project2Detail5Title: "Demo",
-    project2Detail5Desc:
-      "Reserved for a demo showing the graph structure, diagnosis path, and internal workflow.",
-    project3Label: "2021 - 2023",
-    project3Title: "Document-level Extraction & Causal Discovery",
+      "Reached <strong>100k/month</strong> partner MAU and <strong>7k/month</strong> internal MAU, with monthly retention of <strong>54%</strong> / <strong>47%</strong>, partner deflection rate of <strong>59%</strong>, and ticket-assisted resolution rate of <strong>50%</strong>.",
+    project3Label: "2025.01 - Present",
+    project3Title: "Network Risk Identification Assistant | AI Agent",
     project3Desc:
-      "Co-built document-level extraction and causal discovery capabilities with academic collaborators, connecting applied NLP research with production-oriented problem solving.",
-    project3Detail1Title: "Context",
+      "Built a <strong>network risk identification Agent</strong> for proactive customer-network risk management, combining LLM capabilities with network digital twins.",
+    project3Detail1Title: "Business context",
     project3Detail1Desc:
-      "Long-form case documents needed to be converted into structured signals for downstream reasoning and diagnosis.",
-    project3Detail2Title: "What I built",
+      "As customer networks become more complex and intelligent, maintenance is shifting from reactive issue handling to proactive risk management. Traditional expert-rule solutions have low coverage (<strong>&lt;20%</strong>), insufficient accuracy (<strong>&lt;50%</strong>), and weak risk-chain explainability.",
+    project3Detail2Title: "Technical solution",
     project3Detail2Desc:
-      "Worked on <strong>document-level case extraction</strong> and <strong>causal discovery</strong> together with university partners.",
-    project3Detail3Title: "Method",
+      "Built a risk-identification Agent with <strong>LLM + network digital twin</strong>, decomposing expert risk investigation into scenario understanding, tool calling, link reasoning, simulation validation, and result explanation; accumulated tools/Skills, memory, validation, and model-tuning mechanisms.",
+    project3Detail3Title: "Evaluation & feedback",
     project3Detail3Desc:
-      "Combined <strong>global pointer</strong>, <strong>self-supervised learning</strong>, and <strong>contrastive learning</strong> for applied NLP tasks.",
-    project3Detail4Title: "Outcome",
+      "Defined an offline Agent risk benchmark and used accuracy and coverage to drive capability improvement; used online rolling validation and logs to attribute issues across Skill, Harness, and model layers.",
+    project3Detail4Title: "Business impact",
     project3Detail4Desc:
-      "Reached <strong>95%</strong> and <strong>81%</strong> accuracy on key tasks and contributed to <strong>four accepted papers</strong>.",
-    project3Detail5Title: "Demo",
-    project3Detail5Desc:
-      "Reserved for a short explanation video linking the research pipeline to the actual business problem.",
+      "Compared with traditional approaches, increased risk-identification volume by <strong>10×</strong>, improved deep-risk ratio by <strong>80%</strong>, and reduced customer network incident rate by <strong>12%</strong>.",
     blogKicker: "Blog",
     blogTitle: "Latest writing",
     blogArticleTitle:
@@ -197,8 +187,8 @@ const translations = {
     heroTitle: "你好，我是 Karry (zzuyu)",
     introLabel: "当前关注",
     introText:
-      "目前我在 <strong>HUAWEI</strong> 从事 <strong>AI 相关的工作</strong>，重点关注 <strong>ToB 领域 LLM 应用</strong> 与 <strong>产品设计</strong>。",
-    introQuote: "“撇开老板的指令，撇开社会的规训，你到底想创造什么？”",
+      "目前我在 <strong>HUAWEI</strong> 从事 <strong>AI 相关的工作</strong>。",
+    introQuote: "衣角微脏，些许风霜： ）",
     introTagCompany: "华为",
     introTagRole: "LLM算法工程师&产品经理",
     introTagAICoding: "AI Coding",
@@ -218,28 +208,28 @@ const translations = {
     experienceCurrentOrg: "华为 ICT BG",
     experienceCurrentTeam: "AI算法部",
     experienceCurrentTime: "2023.03 - 至今",
-    experienceCurrentRole: "AI算法工程师 & 维保产业算法代表",
+    experienceCurrentRole: "AI 产品经理",
     experienceCurrentBullet1:
-      "Mentor 指导内部 <strong>2 名正式员工</strong> 和 <strong>1 名实习生</strong>，主导基于 <strong>LLM</strong> 的维护 AI 数字化能力建设，构建 <strong>知识问答</strong>、<strong>领域 Agent</strong> 等多款应用，完成 <strong>0→1</strong> 落地全流程。",
+      "作为部门代表对接维保产业（<strong>xxx 亿/年营收</strong>），围绕工程师作业流拆解知识复用、问题处理、风险感知等高价值场景，基于 <strong>RAG</strong>、<strong>Agent</strong> 等能力推进 AI 应用从 <strong>0→1</strong> 探索与落地。",
     experienceCurrentBullet2:
-      "业务产出持续向前，能够贴近业务，从 <strong>用户价值</strong> 与 <strong>业务价值</strong> 出发识别技术问题，累计获得 <strong>4 次竞争力构筑奖</strong>，技术输出获 <strong>稼先火花先锋</strong>，并入选 <strong>年度文章</strong>。",
+      "深度对接<strong>行销</strong>、<strong>服务</strong>等业务人群，理解维保产业业务链路与工程师作业场景，将一线诉求转译为产品需求、场景优先级和版本迭代方向。",
     experienceCurrentBullet3:
-      "熟悉当前 <strong>LLM 应用</strong> 相关技术，对 <strong>Agent 框架</strong>、<strong>脚手架设计</strong> 具备 <strong>0→1</strong> 开发和落地经验，也熟悉应用与模型协作的设计方式。",
-    experienceCurrentAward1: "年度优秀个人奖",
-    experienceCurrentAward2: "创新与技术突破奖（公司）",
-    experienceCurrentAward3: "研发竞争力构建与能力提升奖（ICT BG）",
+      "负责 <strong>10 人团队管理</strong>（内部 4 人 + 外部 6 人），围绕维保 AI 应用推进任务拆解、节奏把控、跨模块协同和交付验收。",
+    experienceCurrentAward1: "维保 AI 0→1",
+    experienceCurrentAward2: "跨业务协同交付",
+    experienceCurrentAward3: "RAG / Agent 产品化",
     experiencePastOrg: "华为 ICT BG",
     experiencePastTeam: "算法与技术开发部",
     experiencePastTime: "2021.03 - 2023.03",
     experiencePastRole: "AI 算法工程师（自然语言处理）",
     experiencePastBullet1:
-      "联合高校基于<strong>自监督与对比学习</strong>构建因果发现算法，并基于<strong>全局指针</strong>实现篇章级案例文本抽取能力，准确率分别达到<strong>95%</strong>和<strong>81%</strong>，中稿<strong>四篇 paper</strong>。",
+      "负责将<strong>业务场景抽象为算法技术方案</strong>，定义模型评测、交付验收和线上 bad case 分析，将能力嵌入业务流。",
     experiencePastBullet2:
-      "基于案例构建<strong>因果图谱</strong>，相关能力落地华为内部作战平台，定位准确率达到<strong>81%</strong>，每年减少成本<strong>2000 万</strong>。",
+      "担任<strong>华为高校合作项目经理</strong>，链接港中深/复旦/中科院自动化所，探索 N+1 技术，中稿 3 篇文章并落地业务平台。",
     experienceAwardsLabel: "个人及项目成果",
-    experiencePastAward1: "金牌团队奖",
-    experiencePastAward2: "年度优秀新员工",
-    experiencePastAward3: "技术创新与突破奖",
+    experiencePastAward1: "业务到算法抽象",
+    experiencePastAward2: "高校合作项目管理",
+    experiencePastAward3: "N+1 技术预研",
     papersKicker: "论文",
     papersTitle: "论文与署名成果",
     paperRoleLabel: "共同作者",
@@ -252,64 +242,55 @@ const translations = {
     projectExpand: "展开细节",
     projectVideoPlaceholder: "视频 Demo / 待补充",
     projectRepoPlaceholder: "GitHub / 暂不公开",
-    projectPaperLink: "论文 / ACL",
-    project1Label: "2026.1 - 至今",
-    project1Title: "数通 IP 风险感知",
+    projectPaperLink: "内部 / 暂不公开",
+    project1Label: "2024.01 - 2025.12",
+    project1Title: "华为服务领域知识萃取 | AI 知识工程",
     project1Desc:
-      "面向华为<strong>数通 IP 场景</strong>，基于 <strong>OpenCode 编程 agent 框架</strong>，结合 <strong>skill</strong> 实现 IP 数通网络的还原与风险感知。",
-    project1Detail1Title: "背景",
+      "面向华为服务与维保场景，构建 <strong>AI 知识工程</strong>产品，将问题单、FAQ、专家经验沉淀为可复用知识资产，支撑下游 LLM 应用。",
+    project1Detail1Title: "业务场景",
     project1Detail1Desc:
-      "华为<strong>数通 IP 网络</strong>存在着大量的隐患和风险，通常一次爆发就会直接影响国计民生。传统产品线规则方案与定制化开发覆盖面低、耗时长，也难以检测<strong>网络级风险</strong>。",
-    project1Detail2Title: "我做了什么",
+      "华为客户维保是 ICT 重要收入单元，工程师问题处理主要依赖案例和经验；工程师案例/华为问题单占比 <strong>&lt;xx%</strong>，故障树节点积累 <strong>&lt;xx 万</strong>，问答对主要靠专家编写。",
+    project1Detail2Title: "技术方案",
     project1Detail2Desc:
-      "从 <strong>0→1</strong> 对齐业务场景需求，以 <strong>AI Coding</strong> 的形式设计整个 AI 应用的架构与实现方案。",
-    project1Detail3Title: "实现方式",
+      "定义问题单/附件清洗、切分、脱敏和字段归一流程；采用<strong>领域模型 + 通用模型组合萃取</strong>；针对长案例设计<strong>多段式拆分、迭代式萃取和合并校验链路</strong>。",
+    project1Detail3Title: "评测反馈",
     project1Detail3Desc:
-      "以 <strong>OpenCode</strong> 等开源 agent 框架作为 runtime 运行框架，构建基于数通 IP 网络六层架构 <strong>（物理层 - 链路层 - IGP - MPLS - BGP - VPN）</strong> 的网络还原建模与风险识别 skill。",
-    project1Detail4Title: "结果",
+      "构建<strong>萃取准确率、萃取质量、案例增量、人力减少</strong>等指标；基于线上 bad case 与专家标注增训模型；嵌入工程师作业流形成无感反馈和数据飞轮。",
+    project1Detail4Title: "业务收益",
     project1Detail4Desc:
-      "完成 <strong>0→1 落地</strong>，并在过程中指导内外部协作者一起推进能力建设。",
-    project1Detail5Title: "Demo",
-    project1Detail5Desc:
-      "这里预留给后续的视频讲解，可展示完整工作流、界面形态与思考路径。",
-    project2Label: "2021 - 2023",
-    project2Title: "作战诊断因果图谱",
+      "推动案例生产从“人写”到“人审”，效率提升 <strong>xx 倍</strong>；组织资产积累效率提升 <strong>xx 倍</strong>，节省人力 <strong>x 万人天/年</strong>，下游 AI 应用准确率提升 <strong>x%-xx%</strong>。",
+    project2Label: "2024.03 - 至今",
+    project2Title: "ICT 领域知识问答 | RAG、Deep Research",
     project2Desc:
-      "基于案例数据构建 <strong>因果图谱</strong> 并落地华为内部作战平台，提升定位准确率，把研究能力转成可量化的业务价值。",
-    project2Detail1Title: "背景",
+      "面向 ICT 维保工程师与伙伴的知识获取、问题处理和经验复用场景，建设 <strong>RAG + Deep Research</strong> 知识问答能力。",
+    project2Detail1Title: "业务场景",
     project2Detail1Desc:
-      "案例知识难以复用，问题定位往往依赖专家经验，效率与稳定性都受限。",
-    project2Detail2Title: "我做了什么",
+      "问答类知识获取属于领域高频场景，存在入口分散、传统 FAQ 问答准确率不足、智能化弱等问题。",
+    project2Detail2Title: "技术方案",
     project2Detail2Desc:
-      "把案例数据结构化为 <strong>因果图谱</strong>，并把相关能力推进到内部作战流程中。",
-    project2Detail3Title: "实现方式",
+      "基于 LLM 组合滑动窗口实现多级产品类别识别，准确率 <strong>90%+</strong>；构建 <strong>BM25 + 向量检索</strong>组合召回；基于 <strong>CO-STAR prompt</strong> 约束答案风格与结构，实现图文并茂输出。",
+    project2Detail3Title: "评测反馈",
     project2Detail3Desc:
-      "把案例挖掘、关系构建与图谱推理串成一条可使用的诊断路径。",
-    project2Detail4Title: "结果",
+      "定义意图/检索/问答准确率、分流率和用户体验等分层指标；构建线上日志和 bad case 归因机制，分钟级定位意图错误、召回缺失、生成幻觉等问题。",
+    project2Detail4Title: "业务收益",
     project2Detail4Desc:
-      "实现 <strong>81% 定位准确率</strong>，并带来 <strong>每年节省 2000 万</strong> 的业务价值。",
-    project2Detail5Title: "Demo",
-    project2Detail5Desc:
-      "这里可放图谱结构、诊断路径和平台工作流的视频演示。",
-    project3Label: "2021 - 2023",
-    project3Title: "篇章级抽取与因果发现",
+      "问答月活 <strong>10w/月</strong>（伙伴）、<strong>7k/月</strong>（内部），月留存率 54%/47%，伙伴分流率 <strong>59%</strong>，问题单辅助解决率 <strong>50%</strong>。",
+    project3Label: "2025.01 - 至今",
+    project3Title: "网络风险识别助手 | AI Agent",
     project3Desc:
-      "与高校合作推进 <strong>篇章级案例抽取</strong> 与 <strong>因果发现</strong> 能力，把应用型 NLP 研究和真实问题连接起来。",
-    project3Detail1Title: "背景",
+      "面向客户网络事前风险识别场景，基于 <strong>LLM + 网络数字孪生</strong> 构建 AI Agent 风险识别助手。",
+    project3Detail1Title: "业务场景",
     project3Detail1Desc:
-      "长案例文档需要先被转成结构化信号，后续诊断和推理能力才能真正建立起来。",
-    project3Detail2Title: "我做了什么",
+      "客户网络越来越复杂化、智能化，维保模式正从“事后管问题”转向“事前管风险”；传统风险预测依赖专家经验和定制规则，存在覆盖率低（<strong>&lt;20%</strong>）、准确率不足（<strong>&lt;50%</strong>）、风险链路难解释等痛点。",
+    project3Detail2Title: "技术方案",
     project3Detail2Desc:
-      "参与 <strong>篇章级案例抽取</strong> 和 <strong>因果发现</strong> 能力建设，并与高校联合推进研究。",
-    project3Detail3Title: "实现方式",
+      "构建网络风险识别 Agent，将专家风险排查流程拆解为场景理解、工具调用、链路推理、仿真验证和结果解释任务流，沉淀工具/Skill、记忆、验证和模型增训机制。",
+    project3Detail3Title: "评测反馈",
     project3Detail3Desc:
-      "结合 <strong>全局指针</strong>、<strong>自监督学习</strong> 和 <strong>对比学习</strong>，用于应用型 NLP 任务。",
-    project3Detail4Title: "结果",
+      "定义线下 Agent 风险评测集，通过准确率和覆盖率牵引能力提升；线上滚动验证，构建日志系统识别 Skill、Harness、模型侧问题，形成反馈验证闭环。",
+    project3Detail4Title: "业务收益",
     project3Detail4Desc:
-      "关键任务达到 <strong>95%</strong> 与 <strong>81%</strong> 的准确率，并贡献了 <strong>四篇中稿论文</strong>。",
-    project3Detail5Title: "Demo",
-    project3Detail5Desc:
-      "这里预留给后续的视频说明，把研究管线和真实业务问题串起来讲清楚。",
+      "相比传统方案，风险识别数量规模提升 <strong>10 倍</strong>，识别的深度风险比例提升 <strong>80%</strong>，客户网络事故率减少 <strong>12%</strong>。",
     blogKicker: "博客",
     blogTitle: "最新文章",
     blogArticleTitle: "AI Agent 大热背后的冷思考：技术理想与业务落地的鸿沟如何跨越？",
@@ -363,7 +344,7 @@ const resolveInitialSlideIndex = () => {
 };
 
 let activeIndex = resolveInitialSlideIndex();
-let currentLanguage = "en";
+let currentLanguage = "zh";
 
 try {
   const savedLanguage = window.localStorage.getItem(languageStorageKey);
