@@ -271,12 +271,12 @@ p {
   display: grid;
   align-items: center;
   padding: 18px 0 0;
-  width: min(100%, 1080px);
+  width: min(calc(100% - 72px), 980px);
   margin: 0 auto;
 }
 
 .slider-stage {
-  width: min(100%, 980px);
+  width: min(100%, 900px);
   margin: 0 auto;
   overflow: hidden;
   border-radius: 42px;
@@ -310,15 +310,15 @@ p {
     0 24px 68px rgba(0, 0, 0, 0.26),
     inset 0 1px 0 rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(26px);
-  padding: 22px 24px;
+  padding: 26px 30px;
   overflow: hidden;
 }
 
 .intro-panel {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 236px;
-  gap: 22px;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  gap: 18px;
 }
 
 .intro-panel::before {
@@ -332,6 +332,7 @@ p {
   opacity: 0.12;
   content: "";
   pointer-events: none;
+  animation: introAura 8s ease-in-out infinite alternate;
 }
 
 .intro-panel::after {
@@ -515,6 +516,25 @@ p {
   color: var(--muted);
   font-size: 0.74rem;
   line-height: 1;
+  transition: transform 220ms ease, border-color 220ms ease, background-color 220ms ease;
+}
+
+.slide.is-active .intro-tag {
+  animation: tagSettle 520ms ease both;
+}
+
+.slide.is-active .intro-tag:nth-child(2) {
+  animation-delay: 70ms;
+}
+
+.slide.is-active .intro-tag:nth-child(3) {
+  animation-delay: 140ms;
+}
+
+.intro-tag:hover {
+  transform: translateY(-2px);
+  border-color: rgba(132, 188, 255, 0.22);
+  background: rgba(120, 182, 255, 0.06);
 }
 
 .intro-tag-icon {
@@ -622,13 +642,26 @@ p {
 }
 
 .portrait-card {
+  position: relative;
   width: min(100%, 220px);
   margin-left: 0;
   overflow: hidden;
   border: 1px solid rgba(210, 226, 255, 0.14);
   border-radius: 22px;
   background: rgba(5, 10, 18, 0.62);
+  animation: portraitDrift 7s ease-in-out infinite;
   transition: transform 320ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+
+.portrait-card::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 4%, rgba(255, 255, 255, 0.08) 18%, transparent 32%);
+  content: "";
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-120%);
+  animation: portraitSheen 6.5s ease-in-out infinite;
 }
 
 .portrait-card img {
@@ -1461,11 +1494,11 @@ p {
 }
 
 .slide-arrow-left {
-  left: 8px;
+  left: -18px;
 }
 
 .slide-arrow-right {
-  right: 8px;
+  right: -18px;
 }
 
 .slide-arrow:hover {
@@ -1612,6 +1645,59 @@ p {
 
   50% {
     transform: rotate(0deg);
+  }
+}
+
+@keyframes introAura {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.96);
+    opacity: 0.1;
+  }
+
+  100% {
+    transform: translate3d(-18px, 14px, 0) scale(1.08);
+    opacity: 0.18;
+  }
+}
+
+@keyframes tagSettle {
+  0% {
+    transform: translateY(8px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes portraitDrift {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes portraitSheen {
+  0%,
+  42% {
+    opacity: 0;
+    transform: translateX(-120%);
+  }
+
+  52% {
+    opacity: 0.55;
+  }
+
+  68%,
+  100% {
+    opacity: 0;
+    transform: translateX(120%);
   }
 }
 
@@ -1849,6 +1935,10 @@ p {
   .background-layer::after,
   .background-ribbon::before,
   .background-ribbon::after,
+  .intro-panel::before,
+  .intro-tag,
+  .portrait-card,
+  .portrait-card::after,
   .intro-panel h1 {
     animation: none;
   }
@@ -1858,6 +1948,7 @@ p {
   .contact-card,
   .project-card,
   .portrait-card,
+  .portrait-card::after,
   .portrait-card img,
   .slide-arrow,
   .site-mark,
